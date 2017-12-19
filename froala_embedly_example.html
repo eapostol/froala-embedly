@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Project EMBED THIS: Using Froala with Embed.ly - Simple Example</title>
+
+    <meta name="description" content="An EventMobi Hack Days Project which attempts to explore using Embed.ly with Froala (option to add platform.io)">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="apple-touch-icon" href="icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- Include external default CSS. -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.25.0/codemirror.min.css">
+
+
+    <!-- Include Froala Editor styles. -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.7.3/css/froala_editor.pkgd.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.7.3/css/froala_style.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- Include Embed.ly style -->
+    <link href="css/third_party/embedly.min.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body>
+
+<!-- Include IE 9 out of date detection -->
+
+<!--[if lte IE 9]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+<![endif]-->
+
+<!-- Include Modernizer, JQuery -->
+<script src="js/vendor/modernizr-3.5.0.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
+<script src="js/plugins.js"></script>
+<script src="js/main.js"></script>
+
+
+<!-- Using Embed.ly in Froala - Simple Example -->
+<textarea></textarea>
+
+<!-- Include Editor JS files. -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.7.3/js/froala_editor.pkgd.min.js"></script>
+
+
+<!-- Sets up the default key for the embedly jQuery Plugin. -->
+
+
+<script type="text/javascript" src="./js/third_party/embedly.min.js"></script>
+
+<!-- Include Embed.ly platform JS. -->
+<script src="https://cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>
+<script type="text/javascript">
+    // $.embedly.defaults.key = '3cdfd74eeb374c07883e97295e60f775';
+</script>
+<p>Preview Window</p>
+<div id="preview" class="fr-view"></div>
+
+<!-- Initialize the Froala editor. -->
+<script> $(function() {
+    // {toolbarButtons: ['bold', 'italic', 'underline', 'embedly']}
+    var settings = {toolbarButtons: ['bold', 'italic', 'underline', 'embedly']};
+    $('textarea').froalaEditor(settings).on('froalaEditor.contentChanged', function (e, editor) {
+        $('#preview').html(editor.html.get());
+    });
+});
+</script>
+
+<p><a href="index.html">Home</a> </p>
+
+</body>
+</html>
