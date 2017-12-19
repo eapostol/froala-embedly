@@ -30,6 +30,7 @@ UPDATES:
 
 TODOS:
 
+- How to overcome the awkward editing workflow once an Embed.ly link is within the content?
 - Implement Iris Platform streaming video sample
 - Does the Iris Platform use the " [oEmbed](https://oembed.com/) " spec
 - Create Presentation based on this README.MD doc using [remark.js](https://remarkjs.com)
@@ -40,7 +41,7 @@ TODOS:
 INFORMAL (SKETCH) NOTES
 
 - Use Embed.ly to embed a physical external player from another source that
-streams live streaming content from platform.io
+streams live streaming content from irisplatform.io
 - How do we overcome cross-domain issues if we are going to embed the player in point one? (CORS?)
 - How do we overcome https to http related cross-domain issues?
 - How do we embed this in the EventMobi Platform?
@@ -53,7 +54,7 @@ COMPLETED:
 
 - Setup Froala Account
 - Setup initial Embed.ly account
-- Setup initial Platform.io account
+- Setup initial IrisPlatform.io account
 - Download Froala Source Files 
 - Initial Exploration of Froala API 
 - Build initial Demo Page implementing Froala Editor 
@@ -69,5 +70,8 @@ Froala Home Page
 
 Embed.ly Home Page
 [Embed.ly in Froala project page at Embed.ly](https://app.embed.ly/organization/embed-in-froala)
+
+[Iris Platform Home Page](https://irisplatform.io/)
+[Creating a Broadcast App on IrisPlatform.io](https://irisplatform.io/docs/broadcasting/howto/)
 
 [oEmbed Specfication](https://oembed.com/)
