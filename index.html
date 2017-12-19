@@ -1,0 +1,98 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="manifest" href="site.webmanifest">
+        <link rel="apple-touch-icon" href="icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+
+        <!-- Include external CSS. -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.25.0/codemirror.min.css">
+
+        <!-- Include Editor style. -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.7.3/css/froala_editor.pkgd.min.css" rel="stylesheet" type="text/css" />
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.7.3/css/froala_style.min.css" rel="stylesheet" type="text/css" />
+
+        <!-- embedly style -->
+        <link href="css/third_party/embedly.min.css" rel="stylesheet" type="text/css" />
+
+
+    </head>
+    <body>
+        <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+        <p>Hello world! This is HTML5 Boilerplate.</p>
+        <script src="js/vendor/modernizr-3.5.0.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.25.0/codemirror.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.25.0/mode/xml/xml.min.js"></script>
+
+
+
+
+        <textarea></textarea>
+
+        <!-- Include Editor JS files. -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.7.3/js/froala_editor.pkgd.min.js"></script>
+
+
+        <!-- Sets up the default key for the embedly jQuery Plugin. -->
+
+
+        <script type="text/javascript" src="./js/third_party/embedly.min.js"></script>
+
+        <!-- Include Embed.ly platform JS. -->
+        <script src="https://cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>
+        <script type="text/javascript">
+            // $.embedly.defaults.key = '3cdfd74eeb374c07883e97295e60f775';
+        </script>
+        <p>Preview Window</p>
+        <div id="preview" class="fr-view"></div>
+
+        <!-- Initialize the Froala editor. -->
+        <script> $(function() {
+            // {toolbarButtons: ['bold', 'italic', 'underline', 'embedly']}
+            var settings = {toolbarButtons: ['bold', 'italic', 'underline', 'embedly']};
+            $('textarea').froalaEditor(settings).on('froalaEditor.contentChanged', function (e, editor) {
+                $('#preview').html(editor.html.get());
+            });
+        });
+        </script>
+
+
+
+
+        <!-- let's go ahead and test embedding IRIS SDK -->
+<!--
+        <div style="width: 50%; padding-bottom: 56.25%; position: relative">
+            <iframe
+                style="position: absolute; width: 100%; height: 100%; border: none"
+                src="https://dist.bambuser.net/player/?resourceUri=https%3A//cdn.bambuser.net/broadcasts/0b9860dd-359a-67c4-51d9-d87402770319%3Fda_signature_method%3DHMAC-SHA256%26da_id%3D9e1b1e83-657d-7c83-b8e7-0b782ac9543a%26da_timestamp%3D1482921565%26da_static%3D1%26da_ttl%3D0%26da_signature%3Dcacf92c6737bb60beb1ee1320ad85c0ae48b91f9c1fbcb3032f54d5cfedc7afe"
+                allowfullscreen></iframe>
+        </div> -->
+
+
+        <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+        <script>
+            window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+            ga('create','UA-XXXXX-Y','auto');ga('send','pageview')
+        </script>
+        <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+    </body>
+</html>
