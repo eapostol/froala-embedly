@@ -28,6 +28,7 @@ RESEARCH:
 UPDATES:
 
 20/12/17
+- Demo is currently hosted [here](http://edapostol.com/Froala/index.html)
 - Worked on EM Embedding of Froala editor, see the HACKDAYS branch in the CMS Frontend repo.
 
 19/12/17
